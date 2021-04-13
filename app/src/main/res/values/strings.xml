@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MVVM Example Application</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login">LOGIN</string>
+    <string name="sort_by_name">Sort by Name</string>
+    <string name="sort_by_index">Sort by Index</string>
 </resources>
