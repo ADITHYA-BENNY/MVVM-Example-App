@@ -1,15 +1,19 @@
 package com.example.mvvmexampleapplication.data
 
-import com.example.mvvmexampleapplication.models.Car
-import retrofit2.Response
+import com.example.mvvmexampleapplication.models.Cars
+import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface CarsApi {
 
-    @GET("cars%2Fcars.json?alt=media&token=803e0706-1458-4e02-bbc7-7109f82d02ff")
-    fun getCars() : Response<List<Car>>
+    @GET("cars.json")
+    fun getCars(
+            @Query("alt") type : String,
+            @Query("token") token : String
+    ) : Call<Cars>
 
     companion object {
         operator fun invoke() : CarsApi {

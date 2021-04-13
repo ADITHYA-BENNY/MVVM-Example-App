@@ -6,10 +6,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.mvvmexampleapplication.repositories.CarRepository
 
 class CarViewModelFactory(
-        private val repository: CarRepository,
-        private val context: Context
+        private val repository: CarRepository
 ) : ViewModelProvider.NewInstanceFactory() {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return CarsActivityViewModel(repository, context) as T
+        return CarsActivityViewModel(repository) as T
     }
 }
